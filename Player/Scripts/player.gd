@@ -15,8 +15,12 @@ func _ready():
 
 
 func _process(delta):
-	direction.x = Input.get_axis("left", "right")
-	direction.y = Input.get_axis("up", "down")
+#	The .normalized() prevents the total magnitude of the vector being greater than one
+#	This fixes the issue of the character walking twice as fast while walking diagonally
+	direction = Vector2(
+		Input.get_axis("left", "right"),
+		Input.get_axis("up", "down")
+	).normalized()
 	pass
 
 

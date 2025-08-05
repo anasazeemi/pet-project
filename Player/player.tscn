@@ -142,6 +142,8 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+wall_min_slide_angle = 0.174533
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
@@ -166,3 +168,5 @@ script = ExtResource("3_btcbx")
 
 [node name="Walk" type="Node" parent="StateMachine"]
 script = ExtResource("4_gwnis")
+
+[node name="Camera2D" type="Camera2D" parent="."]
