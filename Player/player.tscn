@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://dki7r8hoyhhal"]
+[gd_scene load_steps=15 format=3 uid="uid://dki7r8hoyhhal"]
 
 [ext_resource type="Texture2D" uid="uid://ccu2uw8hbf5mp" path="res://Player/Sprites/ExamplePlayerSprite.png" id="1_2ub06"]
 [ext_resource type="Script" uid="uid://6p1frj0k6wf2" path="res://Player/Scripts/player_state_machine.gd" id="2_4ntmi"]
 [ext_resource type="Script" uid="uid://3u5avh262hel" path="res://Player/Scripts/state_idle.gd" id="3_btcbx"]
 [ext_resource type="Script" uid="uid://do7k3bo1p1fvp" path="res://Player/Scripts/state_walk.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://dyku3k1st205r" path="res://Player/Scripts/PlayerCamera.gd" id="5_k53q1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_edjgo"]
 
@@ -170,3 +171,9 @@ script = ExtResource("3_btcbx")
 script = ExtResource("4_gwnis")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -250
+limit_top = -200
+limit_right = 500
+limit_bottom = 400
+limit_smoothed = true
+script = ExtResource("5_k53q1")
